@@ -14,7 +14,9 @@ This is not for engineers who already have their own CLAUDE.md and agent configs
 
 You: "Write a tagline for my coffee shop in Portland."
 
-AI: *"Crafted with passion, served with purpose. Your neighborhood coffee destination, designed to elevate every sip into an experience that seamlessly blends artisanal quality with community warmth."*
+AI:
+
+> "Crafted with passion, served with purpose. Your neighborhood coffee destination, designed to elevate every sip into an experience that seamlessly blends artisanal quality with community warmth."
 
 Every word is technically English. **NONE OF IT MEANS ANYTHING**. You couldn't pick your coffee shop out of that description any more than you could pick a single grain of sand off a beach.
 
