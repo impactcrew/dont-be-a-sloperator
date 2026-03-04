@@ -12,7 +12,7 @@ This is not for engineers who already have their own CLAUDE.md and agent configs
 
 ## Why this exists
 
-I got tired of reading AI slop everywhere. Event descriptions promising "honest conversations" or "a crowd that feels every lap". Blog posts that sound like they were written by a thesaurus with a LinkedIn account. Website headings like "Unlock Your Potential" and buttons that say "Get Started Today."
+We got tired of reading AI slop everywhere. Event descriptions promising "honest conversations" or "a crowd that feels every lap". Blog posts that sound like they were written by a thesaurus with a LinkedIn account. Website headings like "Unlock Your Potential" and buttons that say "Get Started Today."
 
 The tools are good. The default output is not. These rules fix that.
 
