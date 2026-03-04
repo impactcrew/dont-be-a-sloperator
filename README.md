@@ -1,6 +1,6 @@
 # Don't be a sloperator.
 
-A set of rules that stop AI from writing like AI. Works with [Claude Code](https://docs.anthropic.com/en/docs/claude-code) & ChatGPT, but the principles apply anywhere you talk to an LLM.
+A set of rules that stop AI from writing like AI. Works with [Claude Code](https://docs.anthropic.com/en/docs/claude-code) or ChatGPT, but the principles apply anywhere you talk to an LLM.
 
 ## Who this is for
 
@@ -62,6 +62,8 @@ Three things happened:
 The Iron Laws replace AI's default people-pleasing with actual judgment.
 
 ## Install
+
+**Ask you AI:** Give the [Don't Be A Sloperator](https://github.com/impactcrew/dont-be-a-sloperator/) link to your AI Tool of choice and ask it to install/ configure it for you.
 
 **Claude Code:** Copy `CLAUDE.md` to `~/.claude/CLAUDE.md`. Done. Optionally copy `commands/work.md` to `~/.claude/commands/work.md` if you write code.
 
