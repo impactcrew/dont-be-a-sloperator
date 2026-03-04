@@ -10,6 +10,12 @@ This is not for engineers who already have their own CLAUDE.md and agent configs
 
 **Using Claude Code?** Drop in two files and you're done. **Using ChatGPT?** Copy `CHATGPT.md` into your custom instructions (it's sized to fit). **Using Gemini, Copilot, or anything else?** Read the [Iron Laws](#the-iron-laws) below and paste the ones you like into your custom instructions. The rules are plain English, not config syntax.
 
+## Why this exists
+
+I got tired of reading AI slop everywhere. Event descriptions promising "honest conversations" with "like-minded individuals." Blog posts that sound like they were written by a thesaurus with a LinkedIn account. Website headings like "Unlock Your Potential" and buttons that say "Get Started Today."
+
+The tools are good. The default output is not. These rules fix that.
+
 ## What AI does WITHOUT this
 
 You: "Write a tagline for my coffee shop in Portland."
