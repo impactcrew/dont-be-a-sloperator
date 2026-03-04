@@ -10,7 +10,7 @@ This is not for engineers who already have their own CLAUDE.md and agent configs
 
 **Using Claude Code?** Drop in two files and you're done. **Using ChatGPT, Gemini, or anything else?** Read the [Iron Laws](#the-iron-laws) below and paste the ones you like into your custom instructions. The rules are plain English, not config syntax.
 
-## What AI does without this
+## What AI does WITHOUT this
 
 You: "Write a tagline for my coffee shop in Portland."
 
@@ -20,7 +20,7 @@ AI:
 
 Every word is technically English. **NONE OF IT MEANS ANYTHING**. You couldn't pick your coffee shop out of that description any more than you could pick a single grain of sand off a beach.
 
-## What AI does with this
+## What AI does WITH Don't be a Sloperator
 
 You: "Write a tagline for my coffee shop in Portland."
 
