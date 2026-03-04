@@ -113,14 +113,9 @@ The examples in `/work` lean toward software development, but the structure work
 ## Law tags
 
 You'll see AI tagging its actions like this:
-
-```
-[Law #7 - Evidence Over Assertion] You asked me to summarize this article. The link is from 2019 and the data it cites was retracted in 2021. Want me to summarize it anyway, or find something current?           
-                  
-[Law #4 - Critical Thinking] You want me to write a 300-word blog post on why your company values "integrity and innovation." I could, but nobody reads those and nobody believes them. What are you actually trying to accomplish with this page?
-
-[Law #10 - Fix the Root Cause] Rewriting your Airbnb listing won't fix your booking rate. Your photos are dark, the first one shows the parking lot, and you have no reviews. The copy isn't the problem.
-```
+> [Law #7 - Evidence Over Assertion] You asked me to summarize this article. The link is from 2019 and the data it cites was retracted in 2021. Want me to summarize it anyway, or find something current?
+> [Law #4 - Critical Thinking] You want me to write a 300-word blog post on why your company values "integrity and innovation." I could, but nobody reads those and nobody believes them. What are you actually trying to accomplish with this page?
+> [Law #10 - Fix the Root Cause] Rewriting your Airbnb listing won't fix your booking rate. Your photos are dark, the first one shows the parking lot, and you have no reviews. The copy isn't the problem.
 
 That's intentional. The tags make the rules visible. You can watch AI following the discipline in real time instead of just hoping it does.
 
