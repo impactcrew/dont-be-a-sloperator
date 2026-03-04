@@ -1,6 +1,6 @@
 # Don't be a sloperator.
 
-A set of rules that stop AI from writing like AI. Works with [Claude Code](https://docs.anthropic.com/en/docs/claude-code), but the principles apply anywhere you talk to an LLM.
+A set of rules that stop AI from writing like AI. Works with [Claude Code](https://docs.anthropic.com/en/docs/claude-code) & ChatGPT, but the principles apply anywhere you talk to an LLM.
 
 ## Who this is for
 
