@@ -8,14 +8,14 @@ You use ChatGPT, Claude, or another LLM and you're tired of getting back text th
 
 This is not for engineers who already have their own CLAUDE.md and agent configs. They're fine. This is for everyone else.
 
-**Using Claude Code?** Drop in two files and you're done. **Using ChatGPT, Gemini, or anything else?** Read the [Iron Laws](#the-iron-laws) below and paste the ones you like into your custom instructions. The rules are plain English, not config syntax.
+**Using Claude Code?** Drop in two files and you're done. **Using ChatGPT?** Copy `CHATGPT.md` into your custom instructions (it's sized to fit). **Using Gemini, Copilot, or anything else?** Read the [Iron Laws](#the-iron-laws) below and paste the ones you like into your custom instructions. The rules are plain English, not config syntax.
 
-## What AI does WITHOUT this"
+## What AI does WITHOUT this
 
 You: "Write a tagline for my coffee shop in Portland."
 
 AI:
-> "Crafted with passion, served with purpose. Your neighborhood coffee destination, designed to elevate every sip into an experience that seamlessly blends artisanal quality with community warmth."<
+> "Crafted with passion, served with purpose. Your neighborhood coffee destination, designed to elevate every sip into an experience that seamlessly blends artisanal quality with community warmth."
 
 Every word is technically English. NONE OF IT MEANS ANYTHING. You couldn't pick your coffee shop out of that description any more than you could pick a single grain of sand off a beach.
 
@@ -59,7 +59,7 @@ The Iron Laws replace AI's default people-pleasing with actual judgment.
 
 **Claude Code:** Copy `CLAUDE.md` to `~/.claude/CLAUDE.md`. Done. Optionally copy `commands/work.md` to `~/.claude/commands/work.md` if you write code.
 
-**ChatGPT:** Copy the contents of `CHATGPT.md` into Settings > Personalization > Custom Instructions. It's a condensed version of the Iron Laws, written to fit ChatGPT's 1,500-character limit.
+**ChatGPT:** Copy the contents of [`CHATGPT.md`](CHATGPT.md) into Settings > Personalization > Custom Instructions. It's a condensed version of the Iron Laws, written to fit ChatGPT's 1,500-character limit.
 
 **Gemini, Copilot, or anything else:** Open `CLAUDE.md`, copy the rules, and paste them into your custom instructions. Or paste the file into a conversation and ask "set these as my instructions" and it'll walk you through it.
 
