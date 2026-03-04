@@ -65,7 +65,7 @@ The Iron Laws replace AI's default people-pleasing with actual judgment.
 
 **Ask your AI:** Give the [Don't Be A Sloperator](https://github.com/impactcrew/dont-be-a-sloperator/) link to your AI Tool of choice and ask it to install/ configure it for you.
 
-**Claude Code:** Copy `CLAUDE.md` to `~/.claude/CLAUDE.md`. Done. Optionally copy `commands/work.md` to `~/.claude/commands/work.md` if you write code.
+**Claude Code:** Copy `CLAUDE.md` to `~/.claude/CLAUDE.md`. Done. Optionally copy `commands/work.md` to `~/.claude/commands/work.md` if you write code or just want better structured workflows (doesn't have to be coding).
 
 **ChatGPT:** Copy the contents of [`CHATGPT.md`](CHATGPT.md) into Settings > Personalization > Custom Instructions. It's a condensed version of the Iron Laws, written to fit ChatGPT's 1,500-character limit.
 
