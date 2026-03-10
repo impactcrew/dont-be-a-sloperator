@@ -1,3 +1,9 @@
+---
+name: work
+description: Structured 4-phase workflow for non-trivial tasks. Enforces Understand, Plan, Execute, Verify phases with quality gates.
+argument-hint: [task description]
+---
+
 # /work - Structured Task Intake
 
 You are starting a new task. Follow the Workflow Protocol phases strictly. Do NOT skip to output.

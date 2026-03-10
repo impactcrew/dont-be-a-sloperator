@@ -6,9 +6,7 @@ A set of rules that stop AI from writing like AI. Works with [Claude Code](https
 
 You use ChatGPT, Claude, or another LLM and you're tired of getting back text that sounds like it was written by a committee of middle managers. You don't have a custom setup. You don't want to build one. You just want the output to stop sounding like a corporate press release.
 
-This is not for engineers who already have their own CLAUDE.md and agent configs. They're fine. This is for everyone else.
-
-**Using Claude Code?** Drop in two files and you're done. **Using ChatGPT?** Copy `CHATGPT.md` into your custom instructions (it's sized to fit). **Using Gemini, Copilot, or anything else?** Read the [Iron Laws](#the-iron-laws) below and paste the ones you like into your custom instructions. The rules are plain English, not config syntax.
+**Using Claude Code?** Run the install script and you're done. You get the Iron Laws, structured workflows, and three code review agents. **Using ChatGPT?** Copy `CHATGPT.md` into your custom instructions (it's sized to fit). **Using Gemini, Copilot, or anything else?** Read the [Iron Laws](#the-iron-laws) below and paste the ones you like into your custom instructions. The rules are plain English, not config syntax.
 
 ## Why this exists
 
@@ -63,13 +61,25 @@ The Iron Laws replace AI's default people-pleasing with actual judgment.
 
 ## Install
 
-**Ask your AI:** Give the [Don't Be A Sloperator](https://github.com/impactcrew/dont-be-a-sloperator/) link to your AI Tool of choice and ask it to install/ configure it for you.
+**Ask your AI:** Give the [Don't Be A Sloperator](https://github.com/impactcrew/dont-be-a-sloperator/) link to your AI tool of choice and ask it to install/configure it for you.
 
-**Claude Code:** Copy `CLAUDE.md` to `~/.claude/CLAUDE.md`. Done. Optionally copy `commands/work.md` to `~/.claude/commands/work.md` if you write code or just want better structured workflows (doesn't have to be coding).
+**Claude Code:**
+
+```bash
+git clone https://github.com/impactcrew/dont-be-a-sloperator.git
+cd dont-be-a-sloperator
+./install.sh
+```
+
+That installs the Iron Laws, the `/work` and `/review` skills, and three code review agents. If you already have a `~/.claude/CLAUDE.md`, it backs it up first.
+
+**Or install manually:** Copy `CLAUDE.md` to `~/.claude/CLAUDE.md`, copy `agents/*.md` to `~/.claude/agents/`, and copy `skills/*` to `~/.claude/skills/`.
 
 **ChatGPT:** Copy the contents of [`CHATGPT.md`](CHATGPT.md) into Settings > Personalization > Custom Instructions. It's a condensed version of the Iron Laws, written to fit ChatGPT's 1,500-character limit.
 
-**Gemini, Copilot, or anything else:** Open `CLAUDE.md`, copy the rules, and paste them into your custom instructions. Or paste the file into a conversation and ask "set these as my instructions" and it'll walk you through it.
+**Gemini:** Follow the instructions in [`GEMINI.md`](GEMINI.md). Gemini limits you to 10 instruction items added one at a time, so this is a condensed version like the ChatGPT one.
+
+**Anything else:** Open `CLAUDE.md`, read the rules, and paste them into whatever custom instructions your tool supports. The rules are plain English, not config syntax.
 
 > **Already have custom instructions?** Merge the rules in instead of replacing what you have.
 
@@ -115,14 +125,30 @@ The examples in `/work` lean toward software development, but the structure work
 You'll see AI tagging its actions like this:
 
 ```
-[Law #7 - Evidence Over Assertion] You asked me to summarize this article. The link is from 2019 and the data it cites was retracted in 2021. Want me to summarize it anyway, or find something current?           
-                  
+[Law #7 - Evidence Over Assertion] You asked me to summarize this article. The link is from 2019 and the data it cites was retracted in 2021. Want me to summarize it anyway, or find something current?
+
 [Law #4 - Critical Thinking] You want me to write a 300-word blog post on why your company values "integrity and innovation." I could, but nobody reads those and nobody believes them. What are you actually trying to accomplish with this page?
 
 [Law #10 - Fix the Root Cause] Rewriting your Airbnb listing won't fix your booking rate. Your photos are dark, the first one shows the parking lot, and you have no reviews. The copy isn't the problem.
 ```
 
 That's intentional. The tags make the rules visible. You can watch AI following the discipline in real time instead of just hoping it does.
+
+**Don't want them?** Delete the "Law Visibility" paragraph from `CLAUDE.md`. The laws still apply, they just stop announcing themselves.
+
+## Agents and /review
+
+The install includes three review agents that run automatically when `/work` finishes a code task, or on demand with `/review`:
+
+- **Code Reviewer** - Finds bugs, performance issues, dead code, and style problems. Checks against OWASP, reviews error handling, spots N+1 queries.
+- **Security Auditor** - OWASP Top 10 scanning, dependency vulnerabilities, auth/authz review, secrets detection, input validation. Covers DevSecOps, compliance (GDPR/HIPAA/SOC2), and threat modeling.
+- **Architect Reviewer** - Structural integrity, design patterns, coupling analysis, scalability. Reviews microservice boundaries, API design, and DDD compliance.
+
+All three run on Sonnet for speed. The `/review` skill launches them in parallel and consolidates the results into a single report.
+
+### Build your own
+
+The agent and skill files are plain markdown. Read [`INSTALL.md`](INSTALL.md) for a walkthrough on how agents and skills work, how to write your own, and how to customize the ones included here.
 
 ## How is this different from stop-slop?
 
