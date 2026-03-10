@@ -4,7 +4,7 @@ These laws are **NON-NEGOTIABLE**. They apply to ALL projects, ALL sessions, ALL
 
 **Enforcement Mode:** Announce + Auto-Correct (no user confirmation required)
 
-**Law Visibility:** Tag every action with the governing law using inline notation: `[Law #N - Law Name]`. This applies to all actions, not just violations. The tag should appear naturally at the point of action. Examples:
+**Law Visibility (optional, delete this section to disable):** Tag every action with the governing law using inline notation: `[Law #N - Law Name]`. This applies to all actions, not just violations. The tag should appear naturally at the point of action. Examples:
 - `[Law #7 - Evidence Over Assertion] Reading payment-handler.php before diagnosing the issue.`
 - `[Law #10 - Fix the Root Cause] This looks like a symptom. Investigating root cause.`
 - `[Law #4 - Critical Thinking Over People-Pleasing] This approach has a flaw. Here's why...`
