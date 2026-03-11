@@ -61,8 +61,6 @@ The Iron Laws replace AI's default people-pleasing with actual judgment.
 
 ## Install
 
-**Ask your AI:** Give the [Don't Be A Sloperator](https://github.com/impactcrew/dont-be-a-sloperator/) link to your AI tool of choice and ask it to install/configure it for you.
-
 **Claude Code:**
 
 ```bash
@@ -75,7 +73,9 @@ That installs the Iron Laws, the `/work` and `/review` skills, and three code re
 
 **Or install manually:** Copy `CLAUDE.md` to `~/.claude/CLAUDE.md`, copy `agents/*.md` to `~/.claude/agents/`, and copy `skills/*` to `~/.claude/skills/`.
 
-**ChatGPT:** Copy the contents of [`CHATGPT.md`](CHATGPT.md) into Settings > Personalization > Custom Instructions. It's a condensed version of the Iron Laws, written to fit ChatGPT's 1,500-character limit.
+**ChatGPT (Skill):** On a Business, Enterprise, or Edu plan? Download [`dont-be-a-sloperator-chatgpt-skill.zip`](chatgpt-skill/dont-be-a-sloperator-chatgpt-skill.zip) and upload it via your profile icon > Skills > New skill > Upload from your computer.
+
+**ChatGPT (Custom Instructions):** If you don't use Skills, copy the contents of [`CHATGPT.md`](CHATGPT.md) into Settings > Personalization > Custom Instructions. This is a condensed version that fits ChatGPT's 1,500-character limit.
 
 **Gemini:** Follow the instructions in [`GEMINI.md`](GEMINI.md). Gemini limits you to 10 instruction items added one at a time, so this is a condensed version like the ChatGPT one.
 
@@ -138,13 +138,14 @@ That's intentional. The tags make the rules visible. You can watch AI following 
 
 ## Agents and /review
 
-The install includes three review agents that run automatically when `/work` finishes a code task, or on demand with `/review`:
+The install includes four agents. Three are code review agents that run automatically when `/work` finishes a code task, or on demand with `/review`. The fourth helps with writing.
 
 - **Code Reviewer** - Finds bugs, performance issues, dead code, and style problems. Checks against OWASP, reviews error handling, spots N+1 queries.
 - **Security Auditor** - OWASP Top 10 scanning, dependency vulnerabilities, auth/authz review, secrets detection, input validation. Covers DevSecOps, compliance (GDPR/HIPAA/SOC2), and threat modeling.
 - **Architect Reviewer** - Structural integrity, design patterns, coupling analysis, scalability. Reviews microservice boundaries, API design, and DDD compliance.
+- **Content Marketer** - Copy writing, content strategy, SEO optimization, and audience-focused messaging. Works with `/work` to produce copy that follows the Iron Laws.
 
-All three run on Sonnet for speed. The `/review` skill launches them in parallel and consolidates the results into a single report.
+The three review agents run on Sonnet for speed. The `/review` skill launches them in parallel and consolidates the results into a single report.
 
 ### Build your own
 
