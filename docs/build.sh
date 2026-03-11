@@ -12,8 +12,8 @@ html-minifier-terser \
   --minify-js true \
   "$DIR/src/index.html" -o "$DIR/index.html"
 
-csso "$DIR/src/style.css" -o "$DIR/style.css"
+csso "$DIR/src/style.css" -o "$DIR/style-min.css"
 
 echo "Built:"
 wc -c "$DIR/src/index.html" "$DIR/src/style.css" | tail -1 | awk '{print "  src: " $1 " bytes"}'
-wc -c "$DIR/index.html" "$DIR/style.css" | tail -1 | awk '{print "  out: " $1 " bytes"}'
+wc -c "$DIR/index.html" "$DIR/style-min.css" | tail -1 | awk '{print "  out: " $1 " bytes"}'
