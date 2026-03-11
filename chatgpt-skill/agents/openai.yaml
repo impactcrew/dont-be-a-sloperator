@@ -1,0 +1,4 @@
+interface:
+  display_name: "Don't Be A Sloperator"
+  short_description: "Ten rules that stop AI from writing like AI."
+  color: "#c4380d"
