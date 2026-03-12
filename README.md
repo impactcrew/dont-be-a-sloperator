@@ -77,7 +77,9 @@ That installs the rules, the `/work` and `/review` skills, and three code review
 
 **ChatGPT (Custom Instructions):** If you don't use Skills, copy the contents of [`CHATGPT.md`](CHATGPT.md) into Settings > Personalization > Custom Instructions. This is a condensed version that fits ChatGPT's 1,500-character limit.
 
-**Gemini:** Follow the instructions in [`GEMINI.md`](GEMINI.md). Gemini limits you to 10 instruction items added one at a time, so this is a condensed version like the ChatGPT one.
+**Gemini (Gem):** Create a new Gem and paste the contents of [`gemini-gem/instructions.md`](gemini-gem/instructions.md) into the instructions field. One paste, done.
+
+**Gemini (Custom Instructions):** If you don't use Gems, follow [`GEMINI.md`](GEMINI.md) to add each rule as a separate instruction item.
 
 **Anything else:** Open `CLAUDE.md`, read the rules, and paste them into whatever custom instructions your tool supports. The rules are plain English, not config syntax.
 
