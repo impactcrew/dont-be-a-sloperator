@@ -14,6 +14,12 @@ We got tired of reading AI slop everywhere. Event descriptions promising "honest
 
 The tools are good. The default output is not. These rules fix that.
 
+## Why this exists
+
+I got tired of reading AI slop everywhere. Event descriptions promising "honest conversations" with "like-minded individuals." Blog posts that sound like they were written by a thesaurus with a LinkedIn account. Website headings like "Unlock Your Potential" and buttons that say "Get Started Today."
+
+The tools are good. The default output is not. These rules fix that.
+
 ## What AI does WITHOUT this
 
 You: "Write a tagline for my coffee shop in Portland."
