@@ -6,17 +6,11 @@ A set of rules that stop AI from writing like AI. Works with [Claude Code](https
 
 You use ChatGPT, Claude, or another LLM and you're tired of getting back text that sounds like it was written by a committee of middle managers. You don't have a custom setup. You don't want to build one. You just want the output to stop sounding like a corporate press release.
 
-**Using Claude Code?** Run the install script and you're done. You get the Iron Laws, structured workflows, and three code review agents. **Using ChatGPT?** Copy `CHATGPT.md` into your custom instructions (it's sized to fit). **Using Gemini, Copilot, or anything else?** Read the [Iron Laws](#the-iron-laws) below and paste the ones you like into your custom instructions. The rules are plain English, not config syntax.
+**Using Claude Code?** Run the install script and you're done. You get the rules, structured workflows, and three code review agents. **Using ChatGPT?** Copy `CHATGPT.md` into your custom instructions (it's sized to fit). **Using Gemini, Copilot, or anything else?** Read the [10 rules](#the-10-rules) below and paste the ones you like into your custom instructions. The rules are plain English, not config syntax.
 
 ## Why this exists
 
 We got tired of reading AI slop everywhere. Event descriptions promising "honest conversations" or "a crowd that feels every lap". Blog posts that sound like they were written by a thesaurus with a LinkedIn account. Website headings like "Unlock Your Potential" and buttons that say "Get Started Today."
-
-The tools are good. The default output is not. These rules fix that.
-
-## Why this exists
-
-I got tired of reading AI slop everywhere. Event descriptions promising "honest conversations" with "like-minded individuals." Blog posts that sound like they were written by a thesaurus with a LinkedIn account. Website headings like "Unlock Your Potential" and buttons that say "Get Started Today."
 
 The tools are good. The default output is not. These rules fix that.
 
@@ -63,7 +57,7 @@ Three things happened:
 2. It asked what makes the shop different before writing a word. (Law #4: Critical Thinking)
 3. Every option is specific to THIS shop. Compare that to "crafted with passion, served with purpose."
 
-The Iron Laws replace AI's default people-pleasing with actual judgment.
+The rules replace AI's default people-pleasing with actual judgment.
 
 ## Install
 
@@ -75,7 +69,7 @@ cd dont-be-a-sloperator
 ./install.sh
 ```
 
-That installs the Iron Laws, the `/work` and `/review` skills, and three code review agents. If you already have a `~/.claude/CLAUDE.md`, it backs it up first.
+That installs the rules, the `/work` and `/review` skills, and three code review agents. If you already have a `~/.claude/CLAUDE.md`, it backs it up first.
 
 **Or install manually:** Copy `CLAUDE.md` to `~/.claude/CLAUDE.md`, copy `agents/*.md` to `~/.claude/agents/`, and copy `skills/*` to `~/.claude/skills/`.
 
@@ -89,7 +83,7 @@ That installs the Iron Laws, the `/work` and `/review` skills, and three code re
 
 > **Already have custom instructions?** Merge the rules in instead of replacing what you have.
 
-## The Iron Laws
+## The 10 Rules
 
 Ten rules that fix AI's worst habits.
 
@@ -149,7 +143,7 @@ The install includes four agents. Three are code review agents that run automati
 - **Code Reviewer** - Finds bugs, performance issues, dead code, and style problems. Checks against OWASP, reviews error handling, spots N+1 queries.
 - **Security Auditor** - OWASP Top 10 scanning, dependency vulnerabilities, auth/authz review, secrets detection, input validation. Covers DevSecOps, compliance (GDPR/HIPAA/SOC2), and threat modeling.
 - **Architect Reviewer** - Structural integrity, design patterns, coupling analysis, scalability. Reviews microservice boundaries, API design, and DDD compliance.
-- **Content Marketer** - Copy writing, content strategy, SEO optimization, and audience-focused messaging. Works with `/work` to produce copy that follows the Iron Laws.
+- **Content Marketer** - Copy writing, content strategy, SEO optimization, and audience-focused messaging. Works with `/work` to produce copy that follows the rules.
 
 The three review agents run on Sonnet for speed. The `/review` skill launches them in parallel and consolidates the results into a single report.
 
@@ -161,13 +155,13 @@ The agent and skill files are plain markdown. Read [`INSTALL.md`](INSTALL.md) fo
 
 [stop-slop](https://github.com/hardikpandya/stop-slop) and [anti-slop-writing](https://github.com/adenaufal/anti-slop-writing) maintain lists of banned words and phrases. That works, but it's whack-a-mole: ban "seamlessly" and AI switches to "effortlessly."
 
-The Iron Laws take a different approach. Instead of banning specific words, they change how AI evaluates its own output. "If the copy could describe any product in any industry, it's too generic" is a test AI applies to everything it writes, not a list it checks against.
+The 10 rules take a different approach. Instead of banning specific words, they change how AI evaluates its own output. "If the copy could describe any product in any industry, it's too generic" is a test AI applies to everything it writes, not a list it checks against.
 
 The anti-slop rules are also just 3 of 10 laws. The rest address deeper problems: people-pleasing, guessing instead of verifying, and band-aid fixes. Those aren't writing problems. They're thinking problems.
 
 ## Works with your existing setup
 
-The Iron Laws are a foundation, not a framework. They layer under whatever else you use:
+The rules are a foundation, not a framework. They layer under whatever else you use:
 
 - Your own agents and skills keep working
 - Your project-level CLAUDE.md files take precedence for project-specific rules
