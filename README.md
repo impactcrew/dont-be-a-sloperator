@@ -1,18 +1,12 @@
 # Don't be a sloperator.
 
-A set of rules that stop AI from writing like AI. Works with [Claude Code](https://docs.anthropic.com/en/docs/claude-code) or ChatGPT, but the principles apply anywhere you talk to an LLM.
-
-## Who this is for
-
-You use ChatGPT, Claude, or another LLM and you're tired of getting back text that sounds like it was written by a committee of middle managers. You don't have a custom setup. You don't want to build one. You just want the output to stop sounding like a corporate press release.
-
-**Using Claude Code?** Run the install script and you're done. You get the rules, structured workflows, and three code review agents. **Using ChatGPT?** Copy `CHATGPT.md` into your custom instructions (it's sized to fit). **Using Gemini, Copilot, or anything else?** Read the [10 rules](#the-10-rules) below and paste the ones you like into your custom instructions. The rules are plain English, not config syntax.
+Ten rules that change how AI thinks and writes. Works with Claude Code, ChatGPT, Cursor, Copilot, Gemini, Windsurf, and anything else that takes custom instructions.
 
 ## Why this exists
 
 We got tired of reading AI slop everywhere. Event descriptions promising "honest conversations" or "a crowd that feels every lap". Blog posts that sound like they were written by a thesaurus with a LinkedIn account. Website headings like "Unlock Your Potential" and buttons that say "Get Started Today."
 
-The tools are good. The default output is not. These rules fix that.
+The tools are good. The default output is not. Don't Be A Sloperator doesn't just stop slop, it changes how the AI actually thinks.
 
 ## What AI does WITHOUT this
 
@@ -53,15 +47,15 @@ AI:
 > My pick is #1. Says exactly what happens, implies the no-fuss attitude without announcing it, and it's short enough for a window or a cup.
 
 Three things happened:
-1. It refused to write generic slop. (Law #3: No AI Slop Copy)
-2. It asked what makes the shop different before writing a word. (Law #4: Critical Thinking)
+1. It refused to write generic slop. (Rule #3: No AI Slop Copy)
+2. It asked what makes the shop different before writing a word. (Rule #4: Critical Thinking)
 3. Every option is specific to THIS shop. Compare that to "crafted with passion, served with purpose."
 
 The rules replace AI's default people-pleasing with actual judgment.
 
 ## Install
 
-**Claude Code:**
+### Claude Code
 
 ```bash
 git clone https://github.com/impactcrew/dont-be-a-sloperator.git
@@ -69,23 +63,48 @@ cd dont-be-a-sloperator
 ./install.sh
 ```
 
-That installs the rules, the `/work` and `/review` skills, and three code review agents. If you already have a `~/.claude/CLAUDE.md`, it backs it up first.
+That installs the rules, the `/work` and `/review` skills, and four agents (three code reviewers plus a content writing agent). If you already have a `~/.claude/CLAUDE.md`, it backs it up first.
+
+**Or via npx:**
+
+```bash
+npx skills add impactcrew/dont-be-a-sloperator
+```
 
 **Or install manually:** Copy `CLAUDE.md` to `~/.claude/CLAUDE.md`, copy `agents/*.md` to `~/.claude/agents/`, and copy `skills/*` to `~/.claude/skills/`.
 
-**ChatGPT (Skill):** On a Business, Enterprise, or Edu plan? Download [`dont-be-a-sloperator-chatgpt-skill.zip`](chatgpt-skill/dont-be-a-sloperator-chatgpt-skill.zip) and upload it via your profile icon > Skills > New skill > Upload from your computer.
+### ChatGPT, Claude, Gemini, and other tools
 
-**ChatGPT (Custom Instructions):** If you don't use Skills, copy the contents of [`CHATGPT.md`](CHATGPT.md) into Settings > Personalization > Custom Instructions. This is a condensed version that fits ChatGPT's 1,500-character limit.
+The [main website](https://dontbeasloperator.com/) has guided install instructions for every tool, including downloadable skills for ChatGPT, Claude, and Gemini. Or grab the files directly from this repo:
 
-**Gemini:** Follow the instructions in [`GEMINI.md`](GEMINI.md). Gemini limits you to 10 instruction items added one at a time, so this is a condensed version like the ChatGPT one.
-
-**Anything else:** Open `CLAUDE.md`, read the rules, and paste them into whatever custom instructions your tool supports. The rules are plain English, not config syntax.
+- **ChatGPT (Skill):** Download [`dont-be-a-sloperator-chatgpt-skill.zip`](chatgpt-skill/dont-be-a-sloperator-chatgpt-skill.zip) and upload via profile icon > Skills > New skill. (Business, Enterprise, or Edu plans.)
+- **ChatGPT (Custom Instructions):** Copy [`CHATGPT.md`](CHATGPT.md) into Settings > Personalization > Custom Instructions.
+- **Claude (Skill):** Download [`dont-be-a-sloperator-claude-skill.zip`](claude-skill/dont-be-a-sloperator-claude-skill.zip) and upload via Customize > Skills > Upload a skill.
+- **Claude (Custom Instructions):** Copy the rules into Settings > Profile > Custom Instructions.
+- **Gemini (Gem):** Create a new Gem and paste the rules into the instructions field. See the [main website](https://dontbeasloperator.com/) for a walkthrough.
+- **Gemini (Custom Instructions):** Follow the instructions in [`GEMINI.md`](GEMINI.md). Gemini limits you to 10 instruction items added one at a time.
 
 > **Already have custom instructions?** Merge the rules in instead of replacing what you have.
 
+### Developers: just the noslop skill
+
+If you just want AI to stop writing slop copy and don't need the full rules package, install the noslop skill. Works with any tool that supports skills (Claude Code, Cursor, Copilot, Windsurf).
+
+```bash
+npx skills add impactcrew/dont-be-a-sloperator@noslop
+```
+
+See the [developer page](https://dontbeasloperator.com/developers/) for details and examples.
+
+## Works with your existing setup
+
+The rules are a foundation, not a framework. They layer under whatever else you use. Your existing agents, skills, and custom instructions keep working. Project-level config files override the global rules, so team-specific or task-specific rules always win. The `/work` command is optional and independent.
+
+If a rule doesn't fit your workflow, delete it. If you want to add your own, add them. It's a short text file, not a build system.
+
 ## The 10 Rules
 
-Ten rules that fix AI's worst habits.
+Ten rules that cover copy quality, critical thinking, work habits, and verification.
 
 **#1: No Emojis.** Plain text only. No rocket ships, no sparkles, no checkmarks pretending to be communication.
 
@@ -107,19 +126,6 @@ Ten rules that fix AI's worst habits.
 
 **#10: Fix the Root Cause.** No band-aids. If the fix feels like duct tape, dig deeper. Understand WHY before changing anything.
 
-## The /work command
-
-Type `/work` followed by a task description to activate a structured 4-phase workflow:
-
-1. **Understand** - Read the brief, ask questions, research what's needed
-2. **Plan** - Break the work into sections, present an outline for approval
-3. **Execute** - Do the work section by section, checking quality as you go
-4. **Verify** - Review against the original brief, check for slop, present results
-
-Each phase has a gate. AI cannot skip to output without understanding the problem first.
-
-The examples in `/work` lean toward software development, but the structure works for anything complex: writing a proposal, planning an event, restructuring a document. For non-coding tasks, it automatically skips the dev-specific steps (agents, TDD, code review) and just gives you the structured thinking. The value is forcing granular reasoning before action. Without it, LLMs skip straight to a mediocre first draft.
-
 ## Rule tags
 
 You'll see AI tagging its actions like this:
@@ -130,20 +136,37 @@ You'll see AI tagging its actions like this:
 
 > [Law #10 - Fix the Root Cause] Rewriting your Airbnb listing won't fix your booking rate. Your photos are dark, the first one shows the parking lot, and you have no reviews. The copy isn't the problem.
 
-That's intentional. The tags make the rules visible. You can watch AI following the discipline in real time instead of just hoping it does.
+That's intentional. The tags make the rules visible so you can watch them working in real time instead of just hoping they do.
 
-**Don't want them?** Delete the "Law Visibility" paragraph from `CLAUDE.md`. The rules still apply, they just stop announcing themselves.
+**Don't want them?** Delete the "Law Visibility" section from your rules file. The rules still apply, they just stop announcing themselves.
 
-## Agents and /review
+## Claude Code: /work, agents, and /review
 
-The install includes four agents. Three are code review agents that run automatically when `/work` finishes a code task, or on demand with `/review`. The fourth helps with writing.
+The full Claude Code install comes with a structured workflow command and four specialist agents.
+
+### The /work command
+
+Type `/work` followed by a task description to activate a structured 4-phase workflow:
+
+1. **Understand** - Read the brief, ask questions, research what's needed
+2. **Plan** - Break the work into sections, present an outline for approval
+3. **Execute** - Do the work section by section, checking quality as you go
+4. **Verify** - Review against the original brief, check for slop, present results
+
+Each phase has a gate, so AI cannot skip straight to output without understanding the problem first. Use `/work` for anything complex where the first draft would be mediocre: code, proposals, event planning, document rewrites.
+
+For non-coding tasks, it automatically skips the dev-specific steps (agents, TDD, code review) and just gives you the structured thinking.
+
+### Agents
+
+Four agents, each a specialist that runs as a sub-agent with its own context:
 
 - **Code Reviewer** - Finds bugs, performance issues, dead code, and style problems. Checks against OWASP, reviews error handling, spots N+1 queries.
-- **Security Auditor** - OWASP Top 10 scanning, dependency vulnerabilities, auth/authz review, secrets detection, input validation. Covers DevSecOps, compliance (GDPR/HIPAA/SOC2), and threat modeling.
+- **Security Auditor** - OWASP Top 10 scanning, dependency vulnerabilities, auth/authz review, secrets detection, input validation.
 - **Architect Reviewer** - Structural integrity, design patterns, coupling analysis, scalability. Reviews microservice boundaries, API design, and DDD compliance.
 - **Content Marketer** - Copy writing, content strategy, SEO optimization, and audience-focused messaging. Works with `/work` to produce copy that follows the rules.
 
-The three review agents run on Sonnet for speed. The `/review` skill launches them in parallel and consolidates the results into a single report.
+The three code review agents run automatically when `/work` finishes a code task, or on demand with `/review`. The `/review` skill launches them in parallel and consolidates the results into a single report.
 
 ### Build your own
 
@@ -151,21 +174,11 @@ The agent and skill files are plain markdown. Read [`INSTALL.md`](INSTALL.md) fo
 
 ## How is this different from stop-slop?
 
-[stop-slop](https://github.com/hardikpandya/stop-slop) and [anti-slop-writing](https://github.com/adenaufal/anti-slop-writing) maintain lists of banned words and phrases. That works, but it's whack-a-mole: ban "seamlessly" and AI switches to "effortlessly."
+[stop-slop](https://github.com/hardikpandya/stop-slop) and [anti-slop-writing](https://github.com/adenaufal/anti-slop-writing) maintain lists of banned words and phrases. That works, but it's whack-a-mole: ban "seamlessly" and AI switches to "effortlessly." The words change, the problem doesn't.
 
 The 10 rules take a different approach. Instead of banning specific words, they change how AI evaluates its own output. "If the copy could describe any product in any industry, it's too generic" is a test AI applies to everything it writes, not a list it checks against.
 
-The anti-slop rules are also just 3 of 10 laws. The rest address deeper problems: people-pleasing, guessing instead of verifying, and band-aid fixes. Those aren't writing problems. They're thinking problems.
-
-## Works with your existing setup
-
-The rules are a foundation, not a framework. They layer under whatever else you use:
-
-- Your own agents and skills keep working
-- Your project-level CLAUDE.md files take precedence for project-specific rules
-- The /work command is optional and independent
-
-If a rule doesn't fit your workflow, delete it. If you want to add your own, add them. It's a short markdown file, not a build system.
+The anti-slop rules are also just 3 of 10. The rest address deeper problems: people-pleasing, guessing instead of verifying, and band-aid fixes. Those aren't writing problems. They're thinking problems.
 
 ## License
 
