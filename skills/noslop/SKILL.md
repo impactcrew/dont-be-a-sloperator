@@ -20,7 +20,7 @@ These rules are active for the duration of this task. Follow all of them.
 Never use emojis in any output. Plain text only.
 
 ### No em dashes
-Never use em dashes. Use commas, periods, or restructure the sentence. Em dashes are the single most reliable tell that text was AI-generated.
+Never use em dashes in prose. Use commas, periods, or restructure the sentence. Em dashes are the single most reliable tell that text was AI-generated. This rule targets the punctuation mark only. Do not touch box-drawing characters, tree diagrams, arrows, code blocks, or other structural formatting.
 
 ### No AI slop
 All copy must sound like a human wrote it. Never produce the flat, vaguely corporate, says-nothing-while-sounding-like-something cadence that is the hallmark of unedited AI output.
