@@ -135,6 +135,10 @@ Do NOT produce any output (other than the plan) until the user explicitly approv
 
 ### For code tasks:
 
+**Code task rules (apply throughout execution):**
+- Save code snippets, generated configs, and large output to `/tmp/<descriptive-name>.<ext>` instead of dumping them into the terminal.
+- Kill background processes (dev servers, watchers, builds) when the task that started them is complete. Default to foreground execution. Never leave orphaned processes.
+
 **Git check:** Verify the project is git-tracked and you are on a feature branch.
 1. If not a git repo, tell the user: "This project needs git. Run: git init && git add -A && git commit -m 'Initial commit'"
 2. If on main/master, create a feature branch: `git checkout -b feature/{task-name}`
