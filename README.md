@@ -116,11 +116,11 @@ Ten rules that cover copy quality, critical thinking, work habits, and verificat
 
 **#5: Decide or Escalate.** When facing ambiguity, AI either makes a call with brief rationale or presents 2-3 ranked options. No stalling, no open-ended option dumps.
 
-**#6: Output to File, Not Terminal.** Large code blocks and configs get saved to `/tmp/` files and the path is provided back to you, instead of flooding the terminal.
+**#6: Read the Room.** Write for the actual reader. A Slack to your team doesn't read like a board presentation. Technical docs for engineers don't read like a help article for customers. If the audience isn't clear, ask.
 
 **#7: Evidence Over Assertion.** AI never claims something works without checking. Reads the file, runs the command, checks the log. No guessing, no "I believe this should work."
 
-**#8: Clean Up After Yourself.** Finish what you start. Don't leave loose ends, temporary files, or half-done work behind.
+**#8: Clean Up After Yourself.** Finish what you start. Don't leave loose ends, half-done work, or trailing "and so on" placeholders. If you outline steps, cover all of them.
 
 **#9: Learn From Corrections.** When corrected, AI fixes and moves on. No apologies, no repeating the same mistake.
 
